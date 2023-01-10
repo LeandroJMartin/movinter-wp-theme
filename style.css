@@ -11,15 +11,22 @@
 
 @charset "UTF-8";
 
-:root {
-    --color-main: #;
-    --color-base: #;
-    --color-third: #;
+body{
+  font-family: 'Open Sans', sans-serif;
 }
 
-.whats{
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99;
+
+/* Menu */
+.navbar{
+  display: flex;
+  align-items: center;
+}
+.item-menu ul li{
+  display: inline-block;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.item-menu ul li.current_page_item{
+  color: #4518ae;
 }
