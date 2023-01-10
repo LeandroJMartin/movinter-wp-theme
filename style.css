@@ -21,12 +21,12 @@ body{
   display: flex;
   align-items: center;
 }
-.item-menu ul li{
+.menu-nav ul li{
   display: inline-block;
-  padding: 5px 15px;
+  padding: 5px 12px;
   text-transform: uppercase;
   font-size: 0.75rem;
 }
-.item-menu ul li.current_page_item{
+.menu-nav ul li.current_page_item{
   color: #4518ae;
 }

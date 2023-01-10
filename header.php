@@ -48,7 +48,7 @@
 
 <body <?php body_class(); ?> >
 
-  <header>
+  <header class="fixed top-0 left-0 z-50 bg-white w-full border-b-[1px] border-b-blue/25">
     <div class="py-9 container flex justify-between text-gray w-full">
       <a href="<?php echo get_home_url(); ?>">
         <img class="max-w-[180px] lg:max-w-[250px] 2xl:max-w-xs" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Movinter">
