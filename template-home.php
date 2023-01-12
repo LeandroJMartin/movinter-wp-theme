@@ -36,7 +36,6 @@
   wp_reset_postdata();
 
 ?>
-
 </section>
 
 <section class="my-16 bg-bg-about bg-[length:40%_100%] bg-no-repeat">
@@ -63,11 +62,15 @@
           <span class="text-blue text-sm font-semibold mt-3 block">R$32 milhões em negócios fechados</span>
         </div>
       </div>
+      <div class="mt-10 flex">
+        <button class="uppercase w-[200px] py-2 bg-violet text-white rounded-2xl">Seja um expositor</button>
+        <button class="uppercase w-[200px] py-2 border border-violet text-violet rounded-2xl xl:ml-3">Visite a feira</button>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="container text-center py-16">
+<section class="container text-center pt-16 pb-8">
   <h1 class="text-2xl xl:text-3xl text-violet uppercase font-semibold mb-8 block">Conheça os expositores já confirmados para 2023</h1>
 
   <div id="expositores" class="owl-carousel owl-theme">
@@ -106,8 +109,12 @@
   </div>
 </section>
 
-<section class="relative h-8 truncate">
+<section class="relative h-8 truncate mb-5 block">
   <div class="absolute top-0 -left-10 w-[calc(100%+100px)]">
+    <span class="text-blue uppercase text-xl lett tracking-[1rem]">Movinter23</span>
+    <span class="text-violet uppercase text-xl lett tracking-[1rem]">Movinter23</span>
+    <span class="text-blue uppercase text-xl lett tracking-[1rem]">Movinter23</span>
+    <span class="text-violet uppercase text-xl lett tracking-[1rem]">Movinter23</span>
     <span class="text-blue uppercase text-xl lett tracking-[1rem]">Movinter23</span>
     <span class="text-violet uppercase text-xl lett tracking-[1rem]">Movinter23</span>
     <span class="text-blue uppercase text-xl lett tracking-[1rem]">Movinter23</span>
@@ -115,3 +122,7 @@
     <span class="text-blue uppercase text-xl lett tracking-[1rem]">Movinter23</span>
   </div>
 </section>
+
+<?php
+
+  get_template_part('./template-parts/form', 'form');
