@@ -13,6 +13,7 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
+  color: #706f6f;
 }
 
 
@@ -21,12 +22,47 @@ body{
   display: flex;
   align-items: center;
 }
+
 .menu-nav ul li{
   display: inline-block;
   padding: 5px 12px;
   text-transform: uppercase;
   font-size: 0.75rem;
 }
+
+.menu-nav ul li a:hover,
 .menu-nav ul li.current_page_item{
   color: #4518ae;
+}
+
+
+
+/* Slide */
+#banner .owl-dots{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#banner.owl-theme .owl-dots .owl-dot.active span,
+#banner.owl-theme .owl-dots .owl-dot:hover span {
+  background: #ffffff;
+}
+
+#banner.owl-theme .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #4518ae;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid;
+  border-color: #4518ae;
 }

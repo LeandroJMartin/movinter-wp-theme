@@ -5,12 +5,12 @@ $(document).ready(function () {
       $('.menu').toggle('open');
   });
 
-  $('#slide').owlCarousel({
+  $('#banner').owlCarousel({
     loop: false,
     margin: 1,
     mouseDrag: true,
     autoplay: true,
-    dots: false,
+    dots: true,
     nav: false,
     responsiveClass: true,
     responsive: {
@@ -22,6 +22,27 @@ $(document).ready(function () {
       },
       1024: {
           items: 1
+      }
+    }
+  });
+
+  $('#expositores').owlCarousel({
+    loop: false,
+    margin: 25,
+    mouseDrag: true,
+    autoplay: true,
+    dots: true,
+    nav: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+          items: 2,
+      },
+      768: {
+          items: 4,
+      },
+      1024: {
+          items: 6
       }
     }
   });

@@ -129,11 +129,11 @@ function bt_whatsapp($page_id){
   </div>';
 }
 
-function get_content($post, $itens){
+function get_content($post){
 
   $query = array(
     'post_type'      => $post,
-    'posts_per_page' => $itens,
+    'posts_per_page' => -1,
     'order'          => 'ASC'
   );
 

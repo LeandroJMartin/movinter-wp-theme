@@ -7,6 +7,9 @@ module.exports = {
         'blue': '#4518ae',
         'violet': '#ac3de2',
         'gray': '#8c8c8c'
+      },
+      backgroundImage: {
+        'bg-about': "url('./assets/img/bg-movinter.png')",
       }
     },
     fontFamily: {
