@@ -4,9 +4,9 @@ the_post_thumbnail('post-thumbnail', ['class' => 'class="mt-[110px]"']);
 
 ?>
 
-<section class="container py-12 text-center">
-  <h1 class="mb-12 text-2xl 2xl:text-3xl text-violet uppercase font-semibold block">Conheça os expositores já confirmados para 2023</h1>
-  <div class="grid grid-cols-6 gap-6">
+<section class="container py-12 text-center px-4">
+  <h1 class="mb-12 text-xl 2xl:text-3xl text-violet uppercase font-semibold block">Conheça os expositores já confirmados para 2023</h1>
+  <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-4 xl:gap-6">
     <?php
     
     $expositores = get_content('expositores');

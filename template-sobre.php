@@ -1,10 +1,10 @@
-<?php /* Template Name: [Template] Sobre */ get_header();
+<?php /* Template Name: [Template] Sobre */ get_header(); ?>
 
-the_post_thumbnail('post-thumbnail', ['class' => 'class="mt-[110px]"']);
+<div class="mt-[135px] sm:mt-[110px]">
+  <?php the_post_thumbnail('post-thumbnail'); ?>
+</div>
 
-?>
-
-<section class="container pt-10 pb-4">
+<section class="container pt-10 pb-4 px-4">
   <?php
   
     the_field('descricao_sobre');

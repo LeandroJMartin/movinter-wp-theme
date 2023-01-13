@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
   /*-- Menu --*/
-  $('#open-menu').click(function() {
-      $('.menu').toggle('open');
+  $('#open_menu').click(function() {
+      $('#menu').toggle('open');
+      $(this).toggleClass('on');
   });
 
   $('#banner').owlCarousel({
@@ -27,8 +28,7 @@ $(document).ready(function () {
   });
 
   $('#expositores').owlCarousel({
-    loop: false,
-    margin: 25,
+    loop: false,    
     mouseDrag: true,
     autoplay: true,
     dots: true,
@@ -37,12 +37,15 @@ $(document).ready(function () {
     responsive: {
       0: {
           items: 2,
+          margin: 5
       },
       768: {
           items: 4,
+          margin: 15
       },
       1024: {
-          items: 6
+          items: 6,
+          margin: 25
       }
     }
   });

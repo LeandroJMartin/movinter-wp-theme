@@ -48,22 +48,24 @@
 
 <body <?php body_class(); ?> >
 
-  <header class="fixed top-0 left-0 z-50 bg-white w-full border-b-[1px] border-b-blue/20">
-    <div class="py-9 container sm:flex justify-between text-gray w-full">
-      <a href="<?php echo get_home_url(); ?>">
-        <img class="max-w-[180px] lg:max-w-[250px] 2xl:max-w-xs" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Movinter">
-      </a>
-      <button class="menu-toggle">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-      </button>
-      <div class="sm:flex sm:items-center px-7">
-        <span class="uppercase text-xs italic">Patrocinadores</span>
-        <img class="max-w-[80px] lg:max-w-[100px] 2xl:max-w-[150px] mx-3" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/01.png" alt="Logo Sayerlack">
-        <img class="max-w-[80px] lg:max-w-[100px] 2xl:max-w-[150px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/02.png" alt="Logo Arauco">
+  <header class="fixed top-0 left-0 z-50 bg-white w-full border-b-[1px] border-b-blue/20 px-5 xl:px-0">
+    <div class="py-6 sm:py-9 container sm:flex justify-between text-gray w-full">
+      <div class="flex items-center justify-between">
+        <a href="<?php echo get_home_url(); ?>" class="inline-block">
+          <img class="max-w-[180px] lg:max-w-[250px] 2xl:max-w-xs" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Movinter">
+        </a>
+        <button id="open_menu" class="menu-toggle w-5 h-5 cursor-pointer z-50 inline-block xl:hidden">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
       </div>
-      <div class="xl:flex">
+      <div class="mt-4 sm:mt-0 text-center sm:flex sm:items-center px-0 lg:px-7">
+        <span class="uppercase text-xs italic block w-full sm:w-auto">Patrocinadores</span>
+        <img class="inline-block max-w-[100px] 2xl:max-w-[150px] mx-3" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/01.png" alt="Logo Sayerlack">
+        <img class="inline-block max-w-[100px] 2xl:max-w-[150px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/02.png" alt="Logo Arauco">
+      </div>
+      <div id="menu" class="hidden mt-6 xl:mt-0 bg-white xl:flex">
         <nav class="navbar">
           <?php
             wp_nav_menu(
@@ -74,7 +76,7 @@
             ));
           ?>
         </nav>
-        <div class="flex items-center ml-4">
+        <div class="flex items-center ml-4 mt-6 sm:mt-0">
           <a href="https://facebook.com">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 382 382" class="w-4" xml:space="preserve"><path fill="#4518ae" d="M326.1,6H55.9C28.3,6,6,28.3,6,55.9v270.3C6,353.7,28.3,376,55.9,376h133.3l0.2-132.2H155 c-4.5,0-8.1-3.6-8.1-8.1l-0.2-42.6c0-4.5,3.6-8.1,8.1-8.1h34.3v-41.2C189.2,96,218.3,70,261,70h35c4.5,0,8.1,3.6,8.1,8.1V114 c0,4.5-3.6,8.1-8.1,8.1l-21.5,0c-23.2,0-27.7,11-27.7,27.2V185h50.9c4.9,0,8.6,4.2,8,9.1l-5.1,42.6c-0.5,4.1-3.9,7.2-8,7.2h-45.7 L246.8,376h79.3c27.5,0,49.9-22.3,49.9-49.9V55.9C376,28.3,353.7,6,326.1,6z"/></svg>
           </a>
