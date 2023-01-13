@@ -18,8 +18,8 @@
       </div>
     </div>
     <div class="lg:flex py-4 justify-center border-t-[1px] border-stone-300 mt-7">
-      <p class="text-xs">® <?php bloginfo( 'name' ); echo ' '.date('Y').' | '; _e(' Todos os direitos reservados.', cts_add_theme_slug()); ?></p>
-      <div class="flex mt-4 lg:mt-0">
+      <p class="text-xs">® <?php bloginfo( 'name' ); _e(' Todos os direitos reservados.', cts_add_theme_slug()); ?></p>
+      <div class="flex lg:mt-0">
         <p class="text-xs">&nbsp<?php _e('Desenvolvido por', cts_add_theme_slug()); ?> &nbsp</p>
         <a href="https://mayacomunicacao.com.br" target="_blank" title="Maya Comunicação">
             <img alt="Maya Comunicação" class="w-5" src="<?php echo get_template_directory_uri()?>/assets/img/logo-maya.svg">

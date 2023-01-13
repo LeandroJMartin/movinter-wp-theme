@@ -134,7 +134,7 @@ function get_content($post){
   $query = array(
     'post_type'      => $post,
     'posts_per_page' => -1,
-    'order'          => 'ASC'
+    'order'          => 'DESC'
   );
 
   return new WP_Query( $query );

@@ -763,6 +763,14 @@ video {
   height: 1.5rem;
 }
 
+.h-\[450px\] {
+  height: 450px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -1035,6 +1043,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-4 {
