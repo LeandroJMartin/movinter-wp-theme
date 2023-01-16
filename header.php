@@ -40,8 +40,6 @@
   <link rel='dns-prefetch' href='//maps.googleapis.com' /> 
   <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/output.css">
-
   <?php wp_head(); ?>
 
 </head>
@@ -61,7 +59,7 @@
         </button>
       </div>
       <div class="mt-4 sm:mt-0 text-center sm:flex sm:items-center px-0 lg:px-7">
-        <span class="uppercase text-xs italic block w-full sm:w-auto">Patrocinadores</span>
+        <span class="uppercase text-xs italic block w-full sm:w-auto"><?php _e('Patrocinadores') ?></span>
         <img class="inline-block max-w-[100px] 2xl:max-w-[150px] mx-3" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/01.png" alt="Logo Sayerlack">
         <img class="inline-block max-w-[100px] 2xl:max-w-[150px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/02.png" alt="Logo Arauco">
       </div>

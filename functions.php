@@ -25,7 +25,8 @@ function aiwp_scripts(){
     wp_enqueue_style( 'aiwp_owl.carousel.theme-css', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', array(), '2.3.4', 'all' );
     wp_enqueue_style( 'aiwp_fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css' );
 
-    wp_enqueue_style( 'aiwp_style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
+    wp_enqueue_style( 'aiwp_style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );    
+    wp_enqueue_style( 'aiwp_Output', get_template_directory_uri() . '/output.css', array(), '1.0', 'all' );
 
 
     /*-- Google fonts --*/
