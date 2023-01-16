@@ -46,13 +46,13 @@
 
 <body <?php body_class(); ?> >
 
-  <header class="fixed top-0 left-0 z-50 bg-white w-full border-b-[1px] border-b-blue/20 px-5 xl:px-0">
+  <header class="fixed top-0 left-0 z-50 bg-white w-full border-b-[1px] border-b-blue/20 px-4 2xl:px-0">
     <div class="py-6 sm:py-9 container sm:flex justify-between text-gray w-full">
       <div class="flex items-center justify-between">
         <a href="<?php echo get_home_url(); ?>" class="inline-block">
           <img class="max-w-[180px] lg:max-w-[250px] 2xl:max-w-xs" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Movinter">
         </a>
-        <button id="open_menu" class="menu-toggle w-5 h-5 cursor-pointer z-50 inline-block xl:hidden">
+        <button id="open_menu" class="menu-toggle w-5 h-5 cursor-pointer z-50 inline-block sm:ml-10 xl:hidden">
           <span class="one"></span>
           <span class="two"></span>
           <span class="three"></span>

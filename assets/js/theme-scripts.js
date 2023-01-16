@@ -50,4 +50,19 @@ $(document).ready(function () {
     }
   });
 
+  $('.open_logos').on('click', function(){
+
+    let obj = $(this).data('type');
+    $(`.${obj}`).css({'display':'block'});
+
+  });
+
+  function redirect_section(){
+    
+    let position = $('#form').offset().top;
+
+    return $("html, body").animate({scrollTop: position}, 600);
+
+  }$('.btn-form').click( redirect_section );
+
 });

@@ -4,7 +4,7 @@
   <?php the_post_thumbnail('post-thumbnail'); ?>
 </div>
 
-<section class="container pt-10 pb-4 px-4">
+<section class="container pt-10 pb-4 px-4 sobre">
   <?php
   
     the_field('descricao_sobre');

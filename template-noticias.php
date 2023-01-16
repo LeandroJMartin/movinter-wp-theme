@@ -5,8 +5,8 @@ $get_the_lest_post = $query->posts[0];
 
   ?>
 
-  <section class="container py-12 mt-[110px]">
-    <a href="<?php the_permalink(); ?>" class="max-h-[400px] w-full flex-col sm:flex-row flex items-stretch">
+  <section class="container py-12 mt-[110px] px-4 2xl:px-0">
+    <a href="<?php the_permalink($get_the_lest_post->ID); ?>" class="max-h-[400px] w-full flex-col sm:flex-row flex items-stretch">
       <div class="w-[100%] sm:w-[30%] bg-gradient-to-r from-blue to-violet px-6 py-6 flex items-start justify-center flex-col order-2 sm:order-1">
         <p class="text-white text-xl font-semibold mb-4 block"><?php echo $get_the_lest_post->post_title; ?></p>
         <span class="italic underline text-white"><?php _e('Saiba mais'); ?></span>

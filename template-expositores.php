@@ -1,8 +1,8 @@
-<?php /* Template Name: [Template] Expositores */ get_header();
+<?php /* Template Name: [Template] Expositores */ get_header(); ?>
 
-the_post_thumbnail('post-thumbnail', ['class' => 'class="mt-[110px]"']);
-
-?>
+<div class="mt-[135px] sm:mt-[110px]">
+  <?php the_post_thumbnail('post-thumbnail'); ?>
+</div>
 
 <section class="container py-12 text-center px-4">
   <h1 class="mb-12 text-xl 2xl:text-3xl text-violet uppercase font-semibold block">Conheça os expositores já confirmados para 2023</h1>

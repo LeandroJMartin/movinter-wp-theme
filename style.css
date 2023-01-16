@@ -16,6 +16,9 @@ body{
   color: #706f6f;
   font-size: 14px;
 }
+.fit{
+  object-fit: cover;
+}
 
 
 /* Menu */
@@ -191,6 +194,19 @@ body{
 
 .blog-content img{
   margin: 25px 0;
+}
+
+
+/* abount */
+.sobre h1,
+.sobre h2{
+  font-size: 1.7rem;
+  color: #4518ae;
+  font-weight: 600;
+}
+.sobre p{
+  display: block;
+  margin: 15px 0;
 }
 
 
