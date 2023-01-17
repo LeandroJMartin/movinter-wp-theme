@@ -50,7 +50,7 @@
     <div class="py-6 sm:py-9 container sm:flex justify-between text-gray w-full">
       <div class="flex items-center justify-between">
         <a href="<?php echo get_home_url(); ?>" class="inline-block">
-          <img class="max-w-[180px] lg:max-w-[250px] 2xl:max-w-xs" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Movinter">
+          <img class="max-w-[180px] lg:max-w-[250px] 2xl:max-w-xs" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-movinter.png" alt="Logo Movinter">
         </a>
         <button id="open_menu" class="menu-toggle w-5 h-5 cursor-pointer z-50 inline-block sm:ml-10 xl:hidden">
           <span class="one"></span>
@@ -60,8 +60,19 @@
       </div>
       <div class="mt-4 sm:mt-0 text-center sm:flex sm:items-center px-0 lg:px-7">
         <span class="uppercase text-xs italic block w-full sm:w-auto"><?php _e('Patrocinadores') ?></span>
-        <img class="inline-block max-w-[100px] 2xl:max-w-[150px] mx-3" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/01.png" alt="Logo Sayerlack">
-        <img class="inline-block max-w-[100px] 2xl:max-w-[150px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/patrocinio/02.png" alt="Logo Arauco">
+        <?php
+
+          $primarias = array_slice(get_field('imagens_pat', 2), 0, 2);
+
+          foreach($primarias as $img) :
+
+            ?>
+            <img class="inline-block max-w-[100px] 2xl:max-w-[150px] mx-3" src="<?php echo $img; ?>" alt="Logo Patrocinadores">
+            <?php
+
+          endforeach;
+
+          ?>
       </div>
       <div id="menu" class="hidden mt-6 xl:mt-0 bg-white xl:flex">
         <nav class="navbar">
