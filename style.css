@@ -20,6 +20,35 @@ body{
   object-fit: cover;
 }
 
+/* Page login */
+.login h1 a {
+  background-image: url('assets/img/logo-movinter-white.png');
+  background-size: 250px 41px;
+  width: 250px;
+  height: 41px;
+}
+
+body.login {
+  background: #001628;
+  color: #ccc;
+}
+
+body.login form{
+  color: #414141;
+}
+
+.wp-core-ui .button-primary {
+    background: #4518ae;
+    border-color: #4518ae;
+    color: #fff;
+}
+
+.wp-core-ui .button-primary:hover {
+    background: #53B487;
+    border-color: #53B487;
+    color: #fff;
+}
+
 
 /* Menu */
 .navbar{

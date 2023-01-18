@@ -88,16 +88,6 @@
           <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
         </a>
       </div>
-      <div class="item">
-        <a href="<?php the_field('ex_link') ?>">
-          <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
-        </a>
-      </div>
-      <div class="item">
-        <a href="<?php the_field('ex_link') ?>">
-          <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
-        </a>
-      </div>
     
     <?php
 

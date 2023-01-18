@@ -19,15 +19,6 @@
       <a href="<?php the_field('ex_link') ?>">
         <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
       </a>
-      <a href="<?php the_field('ex_link') ?>">
-        <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
-      </a>
-      <a href="<?php the_field('ex_link') ?>">
-        <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
-      </a>
-      <a href="<?php the_field('ex_link') ?>">
-        <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
-      </a>
     
     <?php
 

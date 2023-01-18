@@ -141,3 +141,14 @@ function get_content($post){
   return new WP_Query( $query );
 
 }
+
+function my_custom_login_stylesheet() {
+  wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_custom_login_stylesheet' );
+
+/* Função que altera a URL, trocando pelo endereço do seu site */
+function my_login_logo_url() {
+  return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
