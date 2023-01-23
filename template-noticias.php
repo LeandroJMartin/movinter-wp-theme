@@ -1,6 +1,6 @@
 <?php /* Template Name: [Template] Notícias */ get_header();
 
-$query = get_content('post', );
+$query = get_content('post', '');
 $get_the_lest_post = $query->posts[0];
 
   ?>
@@ -32,7 +32,7 @@ $get_the_lest_post = $query->posts[0];
         <div class="w-full h-[200px] bg-gradient-to-r from-blue to-violet px-6 py-6">
           <p class="text-white text-sm font-semibold mb-4 block"><?php the_title(); ?></p>
           <span class="italic underline text-white"><?php _e('Saiba mais'); ?></span>
-        </div>      
+        </div>
       </a>
       <?php
 

@@ -8,8 +8,8 @@
   <h1 class="mb-12 text-xl 2xl:text-3xl text-violet uppercase font-semibold block">Conheça os expositores já confirmados para 2023</h1>
   <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-4 xl:gap-6">
     <?php
-    
-    $expositores = get_content('expositores');
+
+    $expositores = get_content('expositores', 'rand');
 
     while ( $expositores->have_posts() ) :
       $expositores->the_post();
@@ -19,7 +19,7 @@
       <a href="<?php the_field('ex_link') ?>">
         <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
       </a>
-    
+
     <?php
 
     endwhile;

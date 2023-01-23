@@ -1,10 +1,24 @@
 <?php
 
-$primarias = array_slice(get_field('imagens_pat', 2), 0, 2);
-$restantes = array_slice(get_field('imagens_pat', 2), 2);
+function check_amount($amount){
 
-$apoio_visiveis = array_slice(get_field('imagens_apoio', 2), 0, 3);
-$apoio_restante = array_slice(get_field('imagens_apoio', 2), 3);
+  if($amount['amount'] > 3) :
+
+    return '<button data-type="' . $amount['type'] . '" class="text-zinc-400 inline-block ml-4 open_modal hover:underline" data-type="patrocinio">Ver todos</button>';
+  
+  endif;
+
+}
+
+function loop_images($type_post){
+
+  foreach($type_post['images'] as $img) :
+
+    echo '<img class="max-w-[100px] lg:max-w-[200px] 2xl:max-w-[250px] mr-0 sm:mr-3" src="' . $img . '" alt="Logo">';
+    
+  endforeach;
+
+}
 
 ?>
 
@@ -13,106 +27,38 @@ $apoio_restante = array_slice(get_field('imagens_apoio', 2), 3);
     <div class="block lg:flex">
       <div class="w-2/3">
         <p class="uppercase text-blue">
-          <?php 
-          
-            _e('Patrocínio');
-            
-            if($restantes) :
-              
-              ?>
-              <button class="text-zinc-400 inline-block ml-4 open_logos" data-type="patrocinio">Ver todos</button>
-              <?php
+          <?php
 
-            endif;
+            _e('Patrocínio');
+
+            echo check_amount(get_imgs('imagens_pat'));
 
           ?>
         </p>
-        <div class="flex items-center mt-4 ">
-
+        <div class="flex items-center mt-4">
           <?php
 
-          foreach($primarias as $img) :
-
-            ?>
-            <img class="max-w-[100px] lg:max-w-[200px] 2xl:max-w-[250px] mr-0 sm:mr-3" src="<?php echo $img; ?>" alt="Logo Sayerlack">
-            <?php
-
-          endforeach;
-
-          if($restantes) :
-
-          ?>          
-          <div class="patrocinio absolute bottom-0 left-0 z-20 hidden">
-            <div class="grid grid-cols-4 gap-4 px-4 py-4 bg-white rounded">
-              <?php
-
-                foreach($restantes as $img) :
-
-                  ?>
-                  <img class="max-w-[90px] lg:max-w-[150px] 2xl:max-w-[200px]" src="<?php echo $img; ?>" alt="Logo Sayerlack">
-                  <?php
-                  
-                endforeach;
-
-              ?>
-            </div>
-          </div>
-          <?php
-
-            endif;
-
+            echo loop_images(get_imgs('imagens_pat'));
+            
           ?>
         </div>
       </div>
       <div class="w-1/3 justify-end lg:flex flex-col mt-8 lg:mt-0">
         <p class="uppercase text-blue">
           <?php
-          
+
             _e('Apoio');
 
-            if($apoio_restante) :
-            
-              ?>
-              <button class="text-zinc-400 inline-block ml-4 open_logos" data-type="apoio">Ver todos</button>
-              <?php
-  
-            endif;
+            echo check_amount(get_imgs('imagens_apoio'));
+
           ?>
         </p>
         <div class="flex items-center w-full mt-4 relative">
           <?php
 
-            foreach($apoio_visiveis as $img) :
-              
-              ?>
-              <img class="max-w-[70px] lg:max-w-[150px] 2xl:max-w-[250px] ml-4" src="<?php echo $img; ?>" alt="Logo Poty">
-              <?php
+            echo loop_images(get_imgs('imagens_apoio'));
 
-            endforeach;
-
-            if($apoio_restante) :
-
-              ?>
-              <div class="apoio absolute bottom-0 right-0 z-20 hidden">
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 py-4 bg-white rounded">
-                  <?php
-
-                  foreach($apoio_restante as $img) :
-
-                    ?>
-                    <img class="max-w-[90px] lg:max-w-[150px] 2xl:max-w-[200px]" src="<?php echo $img; ?>" alt="Logo Sayerlack">
-                    <?php
-                    
-                  endforeach;
-
-                  ?>
-                </div>
-              </div>
-              <?php
-
-            endif;
-            
-            ?>
+          ?>
         </div>
       </div>
     </div>
@@ -121,12 +67,30 @@ $apoio_restante = array_slice(get_field('imagens_apoio', 2), 3);
       <div class="flex lg:mt-0">
         <p class="text-xs">&nbsp<?php _e('Desenvolvido por', cts_add_theme_slug()); ?> &nbsp</p>
         <a href="https://mayacomunicacao.com.br" target="_blank" title="Maya Comunicação">
-            <img alt="Maya Comunicação" class="w-5" src="<?php echo get_template_directory_uri()?>/assets/img/logo-maya.svg">
+          <img alt="Maya Comunicação" class="w-5" src="<?php echo get_template_directory_uri()?>/assets/img/logo-maya.svg">
         </a>
       </div>
     </div>
   </div>
 </footer>
+
+<div id="imagens_pat" class="modal fixed top-0 left-0 z-50 w-full h-screen bg-black/75 hidden px-4 py-4">
+  <?php
+
+  $args = array('args' => 'imagens_pat');
+  get_template_part('template-parts/modal-brands', 'post-logos', $args);
+
+  ?>
+</div>
+
+<div id="imagens_apoio" class="modal fixed top-0 left-0 z-50 w-full h-screen bg-black/75 hidden px-4 py-4">
+  <?php
+
+  $args = array('args' => 'imagens_apoio');
+  get_template_part('template-parts/modal-brands', 'post-logos', $args);
+
+  ?>
+</div>
 
 <?php wp_footer(); ?>
 

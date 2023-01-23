@@ -65,4 +65,15 @@ $(document).ready(function () {
 
   }$('.btn-form').click( redirect_section );
 
+
+  $('.open_modal').on('click', function(){
+    let postname = $(this).attr('data-type');
+
+    $('#' + postname).css({'display':'block'});
+  });
+
+  $('.close-modal').click(function(){
+    $('.modal').css({'display':'none'});
+  });
+
 });

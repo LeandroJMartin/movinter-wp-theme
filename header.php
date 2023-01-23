@@ -44,9 +44,9 @@
 
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class('relative'); ?> >
 
-  <header class="fixed top-0 left-0 z-50 bg-white w-full border-b-[1px] border-b-blue/20 px-4 2xl:px-0">
+  <header class="fixed top-0 left-0 z-40 bg-white w-full border-b-[1px] border-b-blue/20 px-4 2xl:px-0">
     <div class="py-6 sm:py-9 container sm:flex justify-between text-gray w-full">
       <div class="flex items-center justify-between">
         <a href="<?php echo get_home_url(); ?>" class="inline-block">

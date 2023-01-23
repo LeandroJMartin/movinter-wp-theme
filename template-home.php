@@ -2,7 +2,7 @@
 
   <?php
 
-  $banner = get_content('banner_home');
+  $banner = get_content('banner_home', '');
 
   ?>
 
@@ -18,10 +18,10 @@
           <a href="<?php the_field('link') ?>">
             <img src="<?php the_field('img_desk') ?>" alt="Image slide Movinter">
             <?php
-            
+
             if (get_field('img_mobile')) :
-              
-              ?>          
+
+              ?>
               <img src="<?php the_field('img_mobile') ?>" alt="Image slide Movinter">
               <?php
 
@@ -30,14 +30,14 @@
             ?>
           </a>
         </div>
-          
+
         <?php
 
       endwhile;
       wp_reset_postdata();
 
     ?>
-  </div>      
+  </div>
 </section>
 
 <section class="my-16 bg-bg-about bg-contain lg:bg-[length:40%_100%] bg-no-repeat">
@@ -77,10 +77,10 @@
   <div id="expositores" class="owl-carousel owl-theme px-2">
   <?php
 
-    $expositores = get_content('expositores');
-    
+    $expositores = get_content('expositores', 'rand');
+
     while ( $expositores->have_posts() ) :
-      $expositores->the_post();      
+      $expositores->the_post();
 
       ?>
       <div class="item">
@@ -88,12 +88,12 @@
           <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
         </a>
       </div>
-    
+
     <?php
 
     endwhile;
     wp_reset_postdata();
-  
+
   ?>
 
   </div>
