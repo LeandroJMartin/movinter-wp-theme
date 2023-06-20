@@ -1,73 +1,85 @@
 <?php
 
-function check_amount($amount){
+function check_amount($amount, $quantit)
+{
 
-  if($amount['amount'] > 3) :
+  if ($amount['amount'] > $quantit) :
 
     return '<button data-type="' . $amount['type'] . '" class="text-zinc-400 inline-block ml-4 open_modal hover:underline" data-type="patrocinio">Ver todos</button>';
-  
-  endif;
 
+  endif;
 }
 
-function loop_images($type_post){
+function loop_images($type_post)
+{
 
-  foreach($type_post['images'] as $img) :
+  foreach ($type_post['images'] as $img) :
 
-    echo '<img class="max-w-[100px] lg:max-w-[200px] 2xl:max-w-[250px] mr-0 sm:mr-3" src="' . $img . '" alt="Logo">';
-    
+    echo '<img class="w-full h-auto" src="' . $img . '" alt="Logo">';
+
   endforeach;
-
 }
 
 ?>
 
 <footer class="px-4 border-t-[1px] border-t-blue/20">
   <div class="container pt-7">
-    <div class="block lg:flex">
-      <div class="w-2/3">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="">
         <p class="uppercase text-blue">
           <?php
 
-            _e('Patrocínio');
+          _e('Patrocínio');
 
-            echo check_amount(get_imgs('imagens_pat'));
+          $quantit_patrocinio = 3;
+
+          echo check_amount(get_imgs('imagens_pat', $quantit_patrocinio), $quantit_patrocinio);
 
           ?>
         </p>
-        <div class="flex items-center mt-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center mt-4">
           <?php
 
-            echo loop_images(get_imgs('imagens_pat'));
-            
+          echo loop_images(get_imgs('imagens_pat', $quantit_patrocinio));
+
           ?>
         </div>
       </div>
-      <div class="w-1/3 justify-end lg:flex flex-col mt-8 lg:mt-0">
+      <?php
+
+      $quantit_apoio = 4;
+      $get_quantit = get_imgs('imagens_apoio', $quantit_apoio);
+
+      $quantit = $get_quantit['amount'] < $quantit_apoio ? $get_quantit['amount'] : $quantit_apoio;
+
+      ?>
+      <div class="justify-end mt-8 lg:mt-0">
         <p class="uppercase text-blue">
           <?php
 
-            _e('Apoio');
+          _e('Apoio');
 
-            echo check_amount(get_imgs('imagens_apoio'));
+
+          echo check_amount(get_imgs('imagens_apoio', $quantit_apoio), $quantit_apoio);
 
           ?>
         </p>
-        <div class="flex items-center w-full mt-4 relative">
+        <div class="grid grid-adjust-cols-mobi grid-adjust-cols-<?php echo $quantit; ?> gap-6 items-center mt-4 relative">
           <?php
 
-            echo loop_images(get_imgs('imagens_apoio'));
+          echo loop_images(get_imgs('imagens_apoio', $quantit_apoio), $quantit_apoio);
 
           ?>
         </div>
       </div>
     </div>
     <div class="lg:flex py-4 justify-center border-t-[1px] border-zinc-200 mt-7">
-      <p class="text-xs">® <?php bloginfo( 'name' ); _e(' Todos os direitos reservados.', cts_add_theme_slug()); ?></p>
+      <p class="text-xs">® <?php bloginfo('name');
+                            _e(' Todos os direitos reservados.', cts_add_theme_slug()); ?></p>
       <div class="flex lg:mt-0">
         <p class="text-xs">&nbsp<?php _e('Desenvolvido por', cts_add_theme_slug()); ?> &nbsp</p>
         <a href="https://mayacomunicacao.com.br" target="_blank" title="Maya Comunicação">
-          <img alt="Maya Comunicação" class="w-5" src="<?php echo get_template_directory_uri()?>/assets/img/logo-maya.svg">
+          <img alt="Maya Comunicação" class="w-5" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-maya.svg">
         </a>
       </div>
     </div>
@@ -93,6 +105,10 @@ function loop_images($type_post){
 </div>
 
 <?php wp_footer(); ?>
-
+<script>
+  $(".formcnpj").mask("00.000.000/0000-00");
+  $(".formcpf").mask("000.000.000-00");
+</script>
 </body>
+
 </html>

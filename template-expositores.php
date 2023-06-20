@@ -1,6 +1,6 @@
 <?php /* Template Name: [Template] Expositores */ get_header(); ?>
 
-<div class="mt-[135px] sm:mt-[110px]">
+<div class="mt-[119px] sm:mt-[110px]">
   <?php the_post_thumbnail('post-thumbnail'); ?>
 </div>
 

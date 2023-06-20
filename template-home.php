@@ -1,4 +1,4 @@
-<section class="mt-[135px] sm:mt-[110px]">
+<section class="mt-[119px] sm:mt-[110px]">
 
   <?php
 
@@ -10,31 +10,31 @@
 
     <?php
 
-      while ( $banner->have_posts() ) :
-        $banner->the_post();
+    while ($banner->have_posts()) :
+      $banner->the_post();
 
-        ?>
-        <div class="item">
-          <a href="<?php the_field('link') ?>">
-            <img src="<?php the_field('img_desk') ?>" alt="Image slide Movinter">
-            <?php
+    ?>
+      <div class="item">
+        <a href="<?php the_field('link') ?>">
+          <img class="desk" src="<?php the_field('img_desk') ?>" alt="Image slide Movinter">
+          <?php
 
-            if (get_field('img_mobile')) :
+          if (get_field('img_mobile')) :
 
-              ?>
-              <img src="<?php the_field('img_mobile') ?>" alt="Image slide Movinter">
-              <?php
+          ?>
+            <img class="mobi" src="<?php the_field('img_mobile') ?>" alt="Image slide Movinter">
+          <?php
 
-            endif;
+          endif;
 
-            ?>
-          </a>
-        </div>
+          ?>
+        </a>
+      </div>
 
-        <?php
+    <?php
 
-      endwhile;
-      wp_reset_postdata();
+    endwhile;
+    wp_reset_postdata();
 
     ?>
   </div>
@@ -75,14 +75,14 @@
   <h1 class="text-xl xl:text-3xl text-violet uppercase font-semibold mb-8 block"><?php _e('Conheça os expositores já confirmados para 2023'); ?></h1>
 
   <div id="expositores" class="owl-carousel owl-theme px-2">
-  <?php
+    <?php
 
     $expositores = get_content('expositores', 'rand');
 
-    while ( $expositores->have_posts() ) :
+    while ($expositores->have_posts()) :
       $expositores->the_post();
 
-      ?>
+    ?>
       <div class="item">
         <a href="<?php the_field('ex_link') ?>">
           <img src="<?php the_field('ex_imagem') ?>" alt="Image slide Movinter">
@@ -94,7 +94,7 @@
     endwhile;
     wp_reset_postdata();
 
-  ?>
+    ?>
 
   </div>
 </section>
@@ -115,4 +115,4 @@
 
 <?php
 
-  get_template_part('./template-parts/form', 'form');
+get_template_part('./template-parts/form', 'form');

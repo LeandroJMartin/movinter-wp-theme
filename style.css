@@ -11,18 +11,18 @@
 
 @charset "UTF-8";
 
-body{
-  font-family: 'Open Sans', sans-serif;
+body {
+  font-family: "Open Sans", sans-serif;
   color: #706f6f;
   font-size: 14px;
 }
-.fit{
+.fit {
   object-fit: cover;
 }
 
 /* Page login */
 .login h1 a {
-  background-image: url('assets/img/logo-movinter-white.png');
+  background-image: url("assets/img/logo-movinter-white.png");
   background-size: 250px 41px;
   width: 250px;
   height: 41px;
@@ -33,30 +33,29 @@ body.login {
   color: #ccc;
 }
 
-body.login form{
+body.login form {
   color: #414141;
 }
 
 .wp-core-ui .button-primary {
-    background: #4518ae;
-    border-color: #4518ae;
-    color: #fff;
+  background: #4518ae;
+  border-color: #4518ae;
+  color: #fff;
 }
 
 .wp-core-ui .button-primary:hover {
-    background: #53B487;
-    border-color: #53B487;
-    color: #fff;
+  background: #53b487;
+  border-color: #53b487;
+  color: #fff;
 }
 
-
 /* Menu */
-.navbar{
+.navbar {
   display: flex;
   align-items: center;
 }
 
-.menu-nav ul li{
+.menu-nav ul li {
   display: inline-block;
   padding: 5px 12px;
   text-transform: uppercase;
@@ -64,48 +63,47 @@ body.login form{
 }
 
 .menu-nav ul li a:hover,
-.menu-nav ul li.current_page_item{
+.menu-nav ul li.current_page_item {
   color: #4518ae;
 }
 
 .on .one {
-    -moz-transform: rotate(45deg) translate(4px, 4px);
-    -ms-transform: rotate(45deg) translate(4px, 4px);
-    -webkit-transform: rotate(45deg) translate(4px, 4px);
-    transform: rotate(45deg) translate(4px, 4px);
-    background: #4518ae;
+  -moz-transform: rotate(45deg) translate(4px, 4px);
+  -ms-transform: rotate(45deg) translate(4px, 4px);
+  -webkit-transform: rotate(45deg) translate(4px, 4px);
+  transform: rotate(45deg) translate(4px, 4px);
+  background: #4518ae;
 }
 
 .on .two {
-    opacity: 0;
+  opacity: 0;
 }
 
 .on .three {
-    -moz-transform: rotate(-45deg) translate(4px, -5px);
-    -ms-transform: rotate(-45deg) translate(4px, -5px);
-    -webkit-transform: rotate(-45deg) translate(4px, -5px);
-    transform: rotate(-45deg) translate(4px, -5px);
-    background: #4518ae;
+  -moz-transform: rotate(-45deg) translate(4px, -5px);
+  -ms-transform: rotate(-45deg) translate(4px, -5px);
+  -webkit-transform: rotate(-45deg) translate(4px, -5px);
+  transform: rotate(-45deg) translate(4px, -5px);
+  background: #4518ae;
 }
 
 .one,
 .two,
 .three {
-    width: 100%;
-    height: 2px;
-    background: #8c8c8c;
-    margin: 0 auto 4px auto;
-    backface-visibility: hidden;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    display: block;
+  width: 100%;
+  height: 2px;
+  background: #8c8c8c;
+  margin: 0 auto 4px auto;
+  backface-visibility: hidden;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  display: block;
 }
 
-
 /* Slide */
-#banner .owl-dots{
+#banner .owl-dots {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -134,28 +132,51 @@ body.login form{
   border-color: #4518ae;
 }
 
-
 /* forms */
-.wpcf7-form textarea::-webkit-input-placeholder{ color: #4518ae; }
-.wpcf7-form input::-webkit-input-placeholder{ color: #4518ae; }
-.wpcf7-form textarea:-ms-input-placeholder{ color: #4518ae; }
-.wpcf7-form input:-ms-input-placeholder{ color: #4518ae; }
-.wpcf7-form textarea::-ms-input-placeholder{ color: #4518ae; }
-.wpcf7-form input::-ms-input-placeholder{ color: #4518ae; }
-.wpcf7-form textarea::placeholder{ color: #4518ae; }
-.wpcf7-form input::placeholder{ color: #4518ae; }
-.wpcf7-form textarea::-moz-placeholder { color: #4518ae; }
-.wpcf7-form input::-moz-placeholder { color: #4518ae; }
-.wpcf7-form textarea:-moz-placeholder { color: #4518ae; }
-.wpcf7-form input:-moz-placeholder { color: #4518ae; }
+.wpcf7-form textarea::-webkit-input-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form input::-webkit-input-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form textarea:-ms-input-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form input:-ms-input-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form textarea::-ms-input-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form input::-ms-input-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form textarea::placeholder {
+  color: #4518ae;
+}
+.wpcf7-form input::placeholder {
+  color: #4518ae;
+}
+.wpcf7-form textarea::-moz-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form input::-moz-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form textarea:-moz-placeholder {
+  color: #4518ae;
+}
+.wpcf7-form input:-moz-placeholder {
+  color: #4518ae;
+}
 
-.wpcf7-form p{
+.wpcf7-form p {
   width: 49%;
   padding: 10px 12px;
   display: inline-block;
 }
 
-.wpcf7-form p span select{
+.wpcf7-form p span select {
   width: 100%;
   max-width: 100%;
   padding: 7px 12px;
@@ -164,17 +185,17 @@ body.login form{
   border-radius: 15px;
 }
 
-.wpcf7-form p span input{
+.wpcf7-form p span input {
   width: 100%;
   max-width: 100%;
   padding: 7px 12px;
   background-color: white;
   color: #4518ae;
   border-radius: 15px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.wpcf7-form p input[type="submit"]{
+.wpcf7-form p input[type="submit"] {
   width: 150px;
   padding: 5px 12px;
   background-color: transparent;
@@ -185,32 +206,32 @@ body.login form{
   cursor: pointer;
 }
 
-.wpcf7-form p input[type="submit"]:hover{
+.wpcf7-form p input[type="submit"]:hover {
   background-color: white;
   color: #4518ae;
   border-color: white;
   font-weight: bold;
 }
 
-.wpcf7-form .wpcf7-spinner{
+.wpcf7-form .wpcf7-spinner {
   display: block;
 }
 
-#wpcf7-f55-o1 .wpcf7-form p{
+#wpcf7-f55-o1 .wpcf7-form p {
   width: 100%;
 }
 
-#wpcf7-f55-o1 .wpcf7-form p span input{
+#wpcf7-f55-o1 .wpcf7-form p span input {
   width: 100%;
   max-width: 100%;
   padding: 7px 12px;
   background-color: white;
   color: #4518ae;
   border-radius: 15px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-#wpcf7-f55-o1 .wpcf7-form p span textarea{
+#wpcf7-f55-o1 .wpcf7-form p span textarea {
   width: 100%;
   max-width: 100%;
   height: 80px;
@@ -218,61 +239,112 @@ body.login form{
   background-color: white;
   color: #4518ae;
   border-radius: 15px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.blog-content img{
+.blog-content img {
   margin: 25px 0;
 }
 
-
 /* abount */
 .sobre h1,
-.sobre h2{
+.sobre h2 {
   font-size: 1.7rem;
   color: #4518ae;
   font-weight: 600;
 }
-.sobre p{
+.sobre p {
   display: block;
   margin: 15px 0;
 }
 
-
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   /* Menu */
-  .navbar{
+  .navbar {
     display: block;
     align-items: left;
   }
 
-  .menu-nav ul li{
+  .menu-nav ul li {
     display: block;
     padding: 5px 12px;
   }
 
-  .menu-nav ul li{
+  .menu-nav ul li {
     padding: 10px 12px;
     font-size: 1.2rem;
   }
 
-  .wpcf7-form p{
+  .wpcf7-form p {
     width: 100%;
     padding: 5px 12px;
   }
 
   .wpcf7-form p span select,
-  .wpcf7-form p span input{
+  .wpcf7-form p span input {
     padding: 5px 7px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-
 }
 
 @media screen and (min-width: 1600px) {
-  .wpcf7-form p span input{
+  .wpcf7-form p span input {
     font-size: 1rem;
   }
-  
+}
+
+#banner .mobi {
+  display: none;
+}
+#banner .desk {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  #banner .mobi {
+    display: block;
+  }
+  #banner .desk {
+    display: none;
+  }
+}
+
+/*
+*
+* Adjust dinacic style 
+*
+*/
+@media screen and (max-width: 1023px) {
+  .grid-adjust-cols-mobi {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-adjust-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .grid-adjust-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+.wpcf7 form .wpcf7-response-output{
+  color: #ffffff;
 }
